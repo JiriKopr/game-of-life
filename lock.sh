@@ -1,6 +1,8 @@
 #!/bin/bash
 
-alacritty -o window.startup_mode=Fullscreen -e ./run.sh &
+dirname=$(dirname $0)
+
+alacritty -o window.startup_mode=Fullscreen -e "$dirname/run.sh" &
 
 gol=$!
 
