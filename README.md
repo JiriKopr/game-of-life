@@ -3,6 +3,8 @@
 Golang implementation of [Conway's Game of Life](https://en.wikipedia.org/wiki/Conway%27s_Game_of_Life) which can be used in combination with
 [i3lock](https://github.com/i3/i3lock) and [Alacritty](https://github.com/alacritty/alacritty) as lockscreen.
 
+Some basic settings can be found in `constants/constants.go`
+
 *Note: Other setups are possible, the game itself will resize to fit the terminal*
 
 This specific setup uses two scripts.

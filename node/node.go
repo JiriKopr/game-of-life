@@ -1,6 +1,11 @@
 package node
 
-import "github.com/gdamore/tcell/v2"
+import (
+	"gol/constants"
+	"math/rand"
+
+	"github.com/gdamore/tcell/v2"
+)
 
 type Node struct {
 	Left   *Node
@@ -115,6 +120,11 @@ func (node *Node) CalculateState() {
 	}
 
 	if node.WillComeToLife() {
+		node.WillBeOn = true
+		return
+	}
+
+	if constants.RANDOM_NOISE && rand.Intn(1000) < 1 {
 		node.WillBeOn = true
 		return
 	}

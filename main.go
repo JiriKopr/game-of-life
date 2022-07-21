@@ -6,6 +6,7 @@ import (
 	"os"
 	"time"
 
+	"gol/constants"
 	. "gol/node"
 
 	"github.com/gdamore/tcell/v2"
@@ -55,7 +56,7 @@ func main() {
 			current.Y = y
 			current.Screen = &screen
 
-			if rand.Intn(100) < 70 {
+			if rand.Intn(100) < constants.INITIAL_SPAWN_CHANGE {
 				current.TurnOn()
 			} else {
 				current.TurnOff()
